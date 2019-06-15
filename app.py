@@ -37,7 +37,7 @@ class TwitterClient:
 
     def get_timeline_tweets(self, num_tweets):
         tweets = []
-        # Specifying how many tweets to pull from a timeline.
+        # Specifying how many tweets to pull from the feed.
         for tweet in Cursor(self.client.user_timeline, id=self.twitter_user).items(num_tweets):
             tweets.append(tweet)
 
